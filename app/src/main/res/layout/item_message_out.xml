@@ -8,44 +8,6 @@
     android:gravity="end"
     android:layout_gravity="end"
     android:orientation="vertical">
-    <!--
-    <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/sender"
-            android:layout_weight="1"
-            android:textAlignment="textEnd"
-            android:paddingStart="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/chatMessage"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:layout_marginStart="20dp"
-            android:textSize="16dp"
-            android:textColor="@color/white"
-            android:foregroundGravity="center"
-            android:background="@drawable/message_text_background"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/viewMediaBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:gravity="end"
-        android:text="Media" />
-    -->
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
