@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/messageRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mediaRecyclerView"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mediaRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/messageLayout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp"
+        android:weightSum="5"
+        android:id="@+id/messageLayout">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/otp_icon"
+            android:drawablePadding="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="32dp"
+            android:layout_weight="4.2"
+            android:drawableEnd="@drawable/add_image_icon"
+            android:background="@drawable/border_layout"
+            android:hint="Enter Messaage"
+            android:id="@+id/chatmessage"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.8"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/send_icon"
+            android:foregroundGravity="center_vertical"
+            android:backgroundTint="@color/purple_500"
+            android:tint="@color/white"
+            app:borderWidth="0dp"
+            android:foregroundTint="@color/white"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="32dp"
+            android:id="@+id/sendBtn"/>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

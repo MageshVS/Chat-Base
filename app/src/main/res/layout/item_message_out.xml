@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/messageItem"
+    android:layout_marginTop="10dp"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:layout_gravity="end"
+    android:orientation="vertical">
+    <!--
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sender"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:paddingStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/chatMessage"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_marginStart="20dp"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:foregroundGravity="center"
+            android:background="@drawable/message_text_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/viewMediaBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:text="Media" />
+    -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="80dp"
+        android:background="@drawable/message_text_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatMessage"
+            android:textSize="14dp"
+            android:text="@string/lorem_ipsum"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/sender"
+            android:layout_width="50dp"
+            android:layout_height="14dp"
+            android:text="magesh"
+            android:textSize="10dp"
+            android:paddingEnd="10dp"
+            android:gravity="end|bottom"
+            android:layout_marginStart="30dp"
+            android:paddingBottom="0dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/timeStrap"
+            app:layout_constraintTop_toBottomOf="@id/chatMessage"/>
+
+        <TextView
+            android:id="@+id/timeStrap"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:text="11:30"
+            android:textSize="10dp"
+            android:gravity="bottom"
+            android:paddingEnd="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chatMessage"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/viewMediaBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_image_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_gravity="end"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toBottomOf="@id/timeStrap"/>
+
+</LinearLayout>
